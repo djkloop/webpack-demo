@@ -2,9 +2,9 @@
   "name": "webpack-demo",
   "version": "1.0.0",
   "description": "webpack",
-  "main": "webpack.config.js",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack4:build": "webpack --config ./webpack4.x/webpack4.x.config.js    --mode production"
   },
   "repository": {
     "type": "git",
@@ -17,19 +17,20 @@
     "url": "https://github.com/djkloop/webpack-demo/issues"
   },
   "homepage": "https://github.com/djkloop/webpack-demo#readme",
-  "dependencies": {
-    "parallel-webpack": "^2.2.0",
-    "react": "^16.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "clean-webpack-plugin": "^0.1.17",
-    "css-loader": "^0.28.9",
+    "css-loader": "^0.28.11",
     "cz-conventional-changelog": "^2.1.0",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "html-webpack-plugin": "^2.30.1",
-    "style-loader": "^0.19.1",
-    "webpack": "^3.10.0",
-    "webpack-merge": "^4.1.1"
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
   },
   "config": {
     "commitizen": {
