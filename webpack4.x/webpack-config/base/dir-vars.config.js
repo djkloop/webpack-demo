@@ -2,7 +2,6 @@ var path = require('path');
 var moduleExports = {};
 
 const currentDirectory = path.resolve(__dirname, '../../');
-console.log(currentDirectory);
 // 源文件目录
 moduleExports.staticRootDir = path.resolve(__dirname, '../../'); // 项目根目录
 moduleExports.srcRootDir = path.resolve(moduleExports.staticRootDir, './src'); // 项目业务代码根目录
