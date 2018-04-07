@@ -6,4 +6,8 @@ var pluginsConfig = require('../base/base.plugins.config.js');
 //     eslint: require('./vendor/eslint.config.js'),
 //   },
 // }));
+
+pluginsConfig.push(
+  new webpack.HotModuleReplacementPlugin()
+)
 module.exports = pluginsConfig;

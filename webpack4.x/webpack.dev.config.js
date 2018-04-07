@@ -6,5 +6,6 @@ module.exports = {
   output: require('./webpack-config/output.config.js'),
   module: require('./webpack-config/module.config.js'),
   plugins: require('./webpack-config/plugins.config.js'),
+  devServer: require('./webpack-config/devServer.config.js'),
   mode
 };
