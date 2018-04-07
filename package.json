@@ -4,7 +4,14 @@
   "description": "webpack",
   "main": "",
   "scripts": {
-    "webpack4:build": "webpack --config ./webpack4.x/webpack4.x.config.js    --mode production"
+    "webpack:dev": "cross-env NODE_ENV=development npm run webpack4.x:dev",
+    "webpack:prod": "npm run clean:build && cross-env NODE_ENV=production npm run webpack4.x:prod",
+    "webpack4.x:dev": "webpack --config ./webpack4.x/webpack.dev.config.js --progress",
+    "webpack4.x:prod": "webpack --config ./webpack4.x/webpack.prod.config.js --progress",
+    "clean:build": "npm run rimraf -- ./webpack4.x/build",
+    "rimraf": "rimraf",
+    "commit": "git-cz",
+    "webpackServer:dev": "webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
@@ -19,19 +26,39 @@
   "homepage": "https://github.com/djkloop/webpack-demo#readme",
   "dependencies": {},
   "devDependencies": {
+    "autoprefix": "^1.0.1",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
+    "cssnano": "^3.10.0",
     "cz-conventional-changelog": "^2.1.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "glob": "^7.1.2",
     "html-webpack-plugin": "^3.2.0",
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
     "node-sass": "^4.8.3",
+    "postcss": "^6.0.21",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^2.1.3",
+    "rimraf": "^2.6.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14"
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.1"
   },
+  "browserslist": [
+    "ie >= 9",
+    "iOS >= 7",
+    "Android > 4.1",
+    "Firefox > 20",
+    "last 2 versions"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
